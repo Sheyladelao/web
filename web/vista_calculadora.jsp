@@ -22,18 +22,18 @@
                       
                          <div class="form-group">
                          <label for="Numero">Valor 1 </label>
-                         <input type="number" class="form-control" id="nombre" name="número"  placeholder="Indique el número">
+                         <input type="number" class="form-control" id="nombre" name="valor1"  placeholder="Indique el número">
                          </div>
                         
                         <div class="form-group">
                          <label for="Numero">Valor 2 </label>
-                         <input type="number" class="form-control" id="nombre" name="número"  placeholder="Indique el número">
+                         <input type="number" class="form-control" id="nombre" name="valor2"  placeholder="Indique el número">
                          </div>
                         
-                        <input type="radio" name="gender" value="ruma"> +<br>
-<input type="radio" name="gender" value="resta"> - <br>
-<input type="radio" name="gender" value="multiplicación"> * <br>
-<input type="radio" name="gender" value="división"> / <br>
+                        <input type="radio" name="opcion" value="1">+<br>
+<input type="radio" name="opcion" value="2">-<br>
+<input type="radio" name="opcion" value="3">*<br>
+<input type="radio" name="opcion" value="4">/<br>
 
                         
                         

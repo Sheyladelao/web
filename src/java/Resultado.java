@@ -6,6 +6,7 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -69,7 +70,32 @@ public class Resultado extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        int resultado=0;
+        int valor1= Integer.parseInt(request.getParameter("valor1"));
+        int valor2= Integer.parseInt(request.getParameter("valor2"));
+        int opcion= Integer.parseInt(request.getParameter("opcion"));
+        switch(opcion){
+            case 1:
+                resultado= valor1+valor2;
+            break;
+            case 2: 
+                resultado= valor1-valor2;
+            break;
+            case 3:
+                resultado= valor1*valor2;
+            break;
+            case 4:
+                resultado= valor1/valor2;      
+            break;
+                
+        }
+        request.setAttribute("valor1",String.valueOf(valor1));
+        request.setAttribute("valor2",String.valueOf(valor2));
+        request.setAttribute("resultado",String.valueOf(resultado));
+        
+        RequestDispatcher rd=request.getRequestDispatcher("vista_resultado.jsp");
+        rd.forward(request,response);
     }
 
     /**

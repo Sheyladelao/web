@@ -13,6 +13,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>Resultado</h1>
+        <%= (String) request.getAttribute("valor1")%>
+        <%= (String) request.getAttribute("valor2")%>
+        <%= (String) request.getAttribute("resultado")%>
     </body>
 </html>
